@@ -6,16 +6,20 @@
  */
 int main(void)
 {
-int x, y, z, r;
+int x, y, z, r, b;
 for (x = '0'; x <= '9'; x++)
 {
 for (y = '0'; y <= '9'; y++)
 {
 for (z = x; z <= '9' ; z++)
 {
-for (r = x + 1; r <= '9'; r++)
+if (z == '0')
+b = y + 1;
+else
+b = '0';
+for (r = b; r <= '9'; r++)
 {
-if (r > '1')
+if (!(r == '1' && z == '0'))
 {
 putchar(',');
 putchar(' ');
