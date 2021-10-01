@@ -15,7 +15,7 @@ for (z = x; z <= '9' ; z++)
 {
 for (r = y + 1; r <= '9'; r++)
 {
-if (r > 1)
+if (r > '1')
 {
 putchar(',');
 putchar(' ');
