@@ -9,21 +9,13 @@ int main(void)
 int x, y, z, r;
 for (x = '0'; x <= '9'; x++)
 {
-for (y='0'; y <= '9';y++)
+for (y = '0'; y <= '9'; y++)
 {
-if (y == '9')
+for (z = '0'; z <= '9'; z++)
 {
-r = '0';
-z = x + 1;
-}
-else
+for (r = '0'; r <= '9'; r++)
 {
-r = y + 1;
-z = x;
-}
-for (; z <= '9' ; z++)
-{
-for (; r <= '9'; r++)
+if ((x < z) || ((x == z) && (y < r)))
 {
 if (!(r == '1' && z == '0'))
 {
@@ -35,6 +27,7 @@ putchar(y);
 putchar(' ');
 putchar(z);
 putchar(r);
+}
 }
 }
 }
