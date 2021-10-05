@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Prints "hi"
+ * main - Prints "hii"
  *
  * Return: hi
  */
