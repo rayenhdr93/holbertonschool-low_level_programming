@@ -3,12 +3,15 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - hi
+ * _islower - hi
+ * @c: hi
+ *
+ * Return: hi
  */
 int _islower(int c)
 {
 	if islower(c)
-		return(1);
+		return (1);
 	else
-		return(0);
+		return (0);
 }
