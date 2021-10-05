@@ -1,16 +1,14 @@
-#include <stdio.h>
+#include <unistd.h>
 #include <ctype.h>
 #include "main.h"
+
 /**
- * main - hi
- *
- * Return: hi
+ * print_alphabet_x10 - hi
  */
-int main(void)
+int _islower(int c)
 {
-	int r;
-	r = _islower('H');
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
+	if islower(c)
+		return(1);
+	else
+		return(0);
 }
