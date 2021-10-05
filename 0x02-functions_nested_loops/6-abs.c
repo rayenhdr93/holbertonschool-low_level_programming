@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * int _abs - hi
+ * _abs - hi
  * @c: hi
  *
  * Return: hi
