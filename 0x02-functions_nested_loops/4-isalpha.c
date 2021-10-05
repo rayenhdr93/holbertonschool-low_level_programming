@@ -2,16 +2,15 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * main - hi
+ * _isalpha - hi
+ * @c: hi
  *
  * Return: hi
  */
-int main(void)
+int _isalpha(int c)
 {
-        if (isalpha('c'))
-        _putchar('1');
-        else
-        _putchar('0');
-        _putchar('\n');
-        return (0);
+	if isalpha(c)
+	return (1);
+	else
+	return (0);
 }
