@@ -1,13 +1,17 @@
-#include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
- * main - hi
- *
- * Return: hi
+ * print_alphabet_x10 - hi
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-	return (0);
+	int x, y;
+
+	for (y = 48; y <= 57; y++)
+	{
+	for (x = 97; x <= 122; x++)
+		_putchar(x);
+	_putchar('\n');
+	}
 }
