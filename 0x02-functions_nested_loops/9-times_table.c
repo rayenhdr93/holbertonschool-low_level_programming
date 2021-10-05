@@ -2,20 +2,19 @@
 #include "main.h"
 /**
  * times_table - hi
- * @c: hi
  *
  * Return: hi
  */
 void times_table(void)
 {
 	int x, y, d, a, m, n, p;
-	
+
 	d = -1;
-	for(x = 0; x <= 9; x++)
+	for (x = 0; x <= 9; x++)
 	{
 		d = d + 1;
-		a = 48;	
-		for(y = 0; y <= 9; y++)
+		a = 48;
+		for (y = 0; y <= 9; y++)
 		{
 			if (a > 57)
 			{
@@ -27,7 +26,7 @@ void times_table(void)
 			}
 			else
 			{
-			_putchar(' ');	
+			_putchar(' ');
 			_putchar(a);
 			}
 			if (y != 9)
