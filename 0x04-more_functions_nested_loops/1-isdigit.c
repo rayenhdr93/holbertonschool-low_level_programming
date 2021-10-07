@@ -2,15 +2,15 @@
 #include "main.h"
 
 /**
- * _isupper - hi
+ * _isdigit - hi
  * @c: hi
  * Return: hi
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int x;
 
-	if (isupper(c))
+	if (isdigit(c))
 		x = 1;
 	else
 		x = 0;
