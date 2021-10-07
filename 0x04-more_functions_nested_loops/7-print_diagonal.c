@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * print_line - hi
+ * print_diagonal - hi
  * @n: hi
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int x;
 
