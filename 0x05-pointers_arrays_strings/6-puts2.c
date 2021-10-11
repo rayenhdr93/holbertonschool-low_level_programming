@@ -7,16 +7,17 @@
  */
 void puts2(char *str)
 {
-	int i, j;
+	int i, j, t;
 
 	char x[1000];
 
 	j = 0;
 	if (strlen(str) > 1)
 	{
-	for (i = 0; str[i] != 0; i++)
+	t = strlen(str) - 1; 
+	for (i = 0; i <= t; i++)
 	{
-		if (((i % 2) == 0) && (str[i] != 0))
+		if ((i % 2) == 0)
 		{
 		x[j] = str[i];
 		j++;
