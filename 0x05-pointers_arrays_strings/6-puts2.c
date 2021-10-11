@@ -16,7 +16,7 @@ void puts2(char *str)
 	{
 	for (i = 0; str[i] != 0; i++)
 	{
-		if ((i % 2) == 0)
+		if (((i % 2) == 0) && (str[i] != 0))
 		{
 		x[j] = str[i];
 		j++;
