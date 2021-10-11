@@ -8,11 +8,11 @@
 void rev_string(char *s)
 {
 	int i;
-	char x[10];
+	char x[9];
 
 	for (i = (strlen(s) - 1); i >= 0; i--)
 	{
-		strcat( x, s[i]);
+		x[(strlen(s) - 1) - i] = s[i];
 	}
-	strcpy( s, x);
+	strcpy(s, x);
 }
