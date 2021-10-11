@@ -11,7 +11,7 @@ void rev_string(char *s)
 
 	char x[1000];
 
-	if (strlen(s)>1)
+	if (strlen(s) > 1)
 	{
 	for (i = (strlen(s) - 1); i >= 0; i--)
 	{
