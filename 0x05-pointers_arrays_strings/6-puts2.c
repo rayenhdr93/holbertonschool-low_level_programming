@@ -14,7 +14,7 @@ void puts2(char *str)
 	j = 0;
 	if (strlen(str) > 1)
 	{
-	t = strlen(str) - 1; 
+	t = strlen(str) - 1;
 	for (i = 0; i <= t; i++)
 	{
 		if ((i % 2) == 0)
@@ -25,4 +25,6 @@ void puts2(char *str)
 	}
 	puts(x);
 	}
+	else
+	puts(str);
 }
