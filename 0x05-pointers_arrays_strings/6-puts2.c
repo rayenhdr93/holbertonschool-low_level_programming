@@ -7,11 +7,8 @@
  */
 void puts2(char *str)
 {
-	int i, j, t;
+	int i, t;
 
-	char x[1000];
-
-	j = 0;
 	if (strlen(str) > 1)
 	{
 	t = strlen(str) - 1;
@@ -19,12 +16,9 @@ void puts2(char *str)
 	{
 		if ((i % 2) == 0)
 		{
-		x[j] = str[i];
-		j++;
+		_putchar(str[i]);
 		}
 	}
-	puts(x);
 	}
-	else
-	puts(str);
+	_putchar('\n');
 }
