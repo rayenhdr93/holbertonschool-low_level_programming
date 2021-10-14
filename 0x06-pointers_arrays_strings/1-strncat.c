@@ -5,7 +5,7 @@
  * @dest: hi
  * @src: hi
  * @n: hi
- *
+ * Return: hi
  */
 char *_strncat(char *dest, char *src, int n)
 {

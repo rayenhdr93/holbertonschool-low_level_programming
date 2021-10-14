@@ -3,6 +3,7 @@
 /**
  * string_toupper - hi
  * @c: hi
+ * Return: hi
  */
 char *string_toupper(char *c)
 {
