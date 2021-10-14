@@ -1,0 +1,17 @@
+#include "main.h"
+/**
+ * reverse_array - hi
+ * @a: hi
+ * @n: hi
+ */
+void reverse_array(int *a, int n)
+{
+	int i, x;
+
+	for (i = 0; i < (n / 2); i++)
+	{
+		x = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = x;
+	}
+}
