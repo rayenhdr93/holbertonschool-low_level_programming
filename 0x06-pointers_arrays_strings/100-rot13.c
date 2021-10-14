@@ -7,17 +7,21 @@
  */
 char *rot13(char *c)
 {
-int i, j, x;
-char car[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char rep[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i, j, x, k;
+char car[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rep[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	x = strlen(c);
 	for (i = 0; i < x; i++)
 	{
-		for (j = 0; j < 52 ; j++)
+		k = 0;
+		for (j = 0; j < 53; j++)
 		{
-			if (c[i] == car[j])
+			if ((c[i] == car[j]) && (k == 0))
+			{
 			c[i] = rep[j];
+			k = 1;
+			}
 		}
 	}
 	return (c);
