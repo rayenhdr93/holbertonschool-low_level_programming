@@ -12,6 +12,8 @@ char *_strncpy(char *dest, char *src, int n)
 	int x, b, i;
 
 	b = strlen(src);
+	if (n > b)
+	n = b;
 	i = 0;
 	for (x = 0; x < n; x++)
 	{
