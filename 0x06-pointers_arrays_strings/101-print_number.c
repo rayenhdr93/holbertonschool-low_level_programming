@@ -13,11 +13,13 @@ void print_number(int n)
 	if (n == 0)
 	_putchar(n + 48);
 	else
+	{
 	if (n < 0)
 	{
 	_putchar('-');
-	n1 = -n1;
+	d = -1;
 	}
+	else
 	d = 1;
 	r = 11;
 	while (r >= 10)
@@ -25,12 +27,13 @@ void print_number(int n)
 	d = d * 10;
 	r = n1 / d;
 	}
-	while (n1 > 0)
+	while ((n1 > 0) || (n1 < 0))
 	{
 		x = n1 / d;
 		n1 = n1 % d;
 		_putchar(x + 48);
 		d = d / 10;
 		i++;
+	}
 	}
 }
