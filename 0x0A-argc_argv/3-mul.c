@@ -22,7 +22,7 @@ int num(char *c)
 		else if (c[i] == '-')
 			x = -x;
 		else
-		return (1);
+		return (94366);
 	}
 	return (x);
 }
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 	ar = num(argv[i]);
-	if (ar != 1)
+	if (ar != 94366)
 	s = s * ar;
 	else
 	{
