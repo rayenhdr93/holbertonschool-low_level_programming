@@ -20,7 +20,7 @@ int num(char *c)
 			j = j * 10;
 		}
 		else if (c[i] == '-')
-			x = -x;
+			x = - x;
 		else
 		return (1030409);
 	}
