@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	break;
 	}
 	}
-	if (argc > 1)
+	if (argc == 3)
 	{
 		printf("%d\n", s);
 		return (0);
