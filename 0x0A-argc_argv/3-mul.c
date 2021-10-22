@@ -22,7 +22,7 @@ int num(char *c)
 		else if (c[i] == '-')
 			x = -x;
 		else
-		return (94366);
+		return (1030409);
 	}
 	return (x);
 }
