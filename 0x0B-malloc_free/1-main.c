@@ -10,6 +10,7 @@
 int main(void)
 {
     char *s;
+    int x;
 
     s = _strdup(NULL);
     if (s == NULL)
@@ -19,5 +20,7 @@ int main(void)
     }
     printf("%s\n", s);
     free(s);
-    return (0);
+    x = sizeof(s);
+	printf("%d\n", x);
+    	return (0);
 }
