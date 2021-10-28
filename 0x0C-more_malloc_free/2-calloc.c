@@ -10,10 +10,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p;
 
+	if ((size == 0) || (nmemb == 0))
+		return (NULL);
 	p = malloc(size * nmemb);
 	if (!p)
-		return (NULL);
-	if ((size <= 0) || (nmemb <= 0))
 		return (NULL);
 	memset(p, 0, size * nmemb);
 	return (p);
