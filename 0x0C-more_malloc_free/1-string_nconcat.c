@@ -5,7 +5,7 @@
  * @s1: hi
  * @s2: hi
  * @n: hi
- * Return: hi
+ * Return: hi
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -30,9 +30,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		else
 			ch[i] = s2[i - x];
 	}
-	if ((x + y) == 0)
-	ch[0] = '\0';
-	else
 	ch[x + n] = '\0';
 	return (ch);
 }
