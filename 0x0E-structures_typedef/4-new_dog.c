@@ -20,7 +20,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		x = malloc(sizeof(struct dog));
 		a = strdup(name);
 		b = strdup(owner);
-		if (!x)
+		if ((!x) || (!a) || (!b))
 		{
 			free(a);
 			free(b);
