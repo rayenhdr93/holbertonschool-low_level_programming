@@ -18,13 +18,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if ((name != NULL) && (age >= 0) && (owner != NULL))
 	{
 		x = malloc(sizeof(struct dog));
-		a = strdup(name);
-		b = strdup(owner);
-		if ((!x) || (!a) || (!b))
+		if (!x)
 		{
-			free(a);
+		free(x);
+		return (NULL);
+		}
+		a = strdup(name);
+		if (!a)
+		{
+		free(a);
+		return (NULL);
+		}
+		b = strdup(owner);
+		if (!b)
+		{
 			free(b);
-			free(x);
 			return (NULL);
 		}
 		x->name = a;
