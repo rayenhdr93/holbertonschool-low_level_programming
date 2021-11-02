@@ -21,8 +21,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		x = malloc(sizeof(struct dog));
 		r = strlen(name);
 		h = strlen(owner);
-		a = malloc(r);
-		b = malloc(h);
+		a = malloc(r + 1);
+		b = malloc(h + 1);
 		a = name;
 		b = owner;
 		if ((!x) || (!a) || (!b))
