@@ -3,6 +3,19 @@
 #include <stdlib.h>
 #include "string.h"
 /**
+ * free_dog
+ * @d: hi
+ */
+void free_dog(dog_t *d)
+{
+	if (d)
+	{
+	free(d->name);
+	free(d->owner);
+	free(d);
+	}
+}
+/**
  * new_dog - hi
  * @name: hi
  * @age: hi
@@ -26,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		{
 			free(b);
 			free(a);
-			free(x);
+			free_dog(x);
 			return (NULL);
 		}
 		x->name = a;
