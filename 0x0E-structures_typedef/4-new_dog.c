@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include "string.h"
 /**
  * new_dog - hi
  * @name: hi
@@ -17,15 +18,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if ((name != NULL) && (age >= 0) && (owner != NULL))
 	{
 		x = malloc(sizeof(struct dog));
-		a = strndup(x->name, sizeof(x->name));
-		b = strndup(x->owner, sizeof(x->owner));
+		a = strdup(name);
+		b = strdup(owner);
 		if (!x)
 		{
 			free(x);
 			return (NULL);
 		}
-		x->name = name;
-		x->owner = owner;
+		x->name = a;
+		x->owner = b;
 		x->age = age;
 		return (x);
 	}
