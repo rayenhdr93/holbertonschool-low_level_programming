@@ -16,13 +16,13 @@ int (*get_op_func(char *s))(int a, int b)
 	{"%", op_mod},
 	{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
 	while (i < 5)
 	{
-		if (ops->op == s)
+		if (ops[i].op == s)
 		{
-			return (ops->(*f)(a, b));
+			return (ops[i].(*f)(a, b));
 		}
 		i++;
 	}
