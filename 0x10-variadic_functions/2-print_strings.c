@@ -14,6 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	if (n == 0)
 	{
 	printf("\n");
+	exit(0);
 	}
 	va_start(ls, n);
 	for (a = 0; a < n; a++)
