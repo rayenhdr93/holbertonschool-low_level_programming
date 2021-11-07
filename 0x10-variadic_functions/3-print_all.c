@@ -32,7 +32,7 @@ void printstring(va_list ls)
 	char *ch;
 
 	ch = va_arg(ls, char *);
-	if (va_arg(ls, char *) != NULL)
+	if (va_arg(ls, char *) == NULL)
 		ch = "(nil)";
 	printf("%s", ch);
 }
@@ -42,7 +42,7 @@ void printstring(va_list ls)
  */
 void print_all(const char * const format, ...)
 {
-	int x, i, j;
+	int i, j;
 	op_t ops[] = {
 	{'c', printchar},
 	{'i', printint},
@@ -52,13 +52,10 @@ void print_all(const char * const format, ...)
 	va_list ls;
 	char *ch;
 
-	if (format != NULL)
-		printf("\n");
 	ch = "";
 	i = 0;
-	x = strlen(format);
 	va_start(ls, format);
-	while (i < x)
+	while ((format != NULL) && (format[i] != '\0'))
 	{
 		j = 0;
 		while ((j < 4) && (format[i] != ops[j].op))
