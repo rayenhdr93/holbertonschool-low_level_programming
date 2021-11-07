@@ -22,8 +22,7 @@ int main(int argc, char *argv[])
 	y = atoi(argv[3]);
 	op = argv[2];
 	if (((op[0] != '+') && (op[0] != '-') && (op[0] != '*')
-			&& (op[0] != '/') && (op[0] != '%') ) 
-		|| (strlen(op) != 1))
+	&& (op[0] != '/') && (op[0] != '%')) || (strlen(op) != 1))
 	{
 		printf("Error\n");
 		exit(99);
