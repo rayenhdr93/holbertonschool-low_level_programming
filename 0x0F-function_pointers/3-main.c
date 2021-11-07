@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
 	}
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
+	if (strlen(argv[2]) != 1)
+		return (0);
 	op = argv[2];
 	if ((op[0] != '+') && (op[0] != '-') && (op[0] != '*')
 			&& (op[0] != '/') && (op[0] != '%'))
