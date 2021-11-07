@@ -30,6 +30,7 @@ void printfloat(va_list ls)
 void printstring(va_list ls)
 {
 	char *ch;
+
 	ch = va_arg(ls, char *);
 	if (va_arg(ls, char *) != NULL)
 		ch = "(nil)";
