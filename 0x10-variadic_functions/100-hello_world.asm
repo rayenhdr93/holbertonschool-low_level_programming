@@ -22,5 +22,5 @@ main:
 
 section .data                   ;section declaration
 
-msg db      "Hello, world",0xa ;our dear string
+msg db      "Hello, World",0xa ;our dear string
 len equ     $ - msg             ;length of our dear string
