@@ -29,12 +29,12 @@ void printfloat(va_list ls)
  */
 void printstring(va_list ls)
 {
-	char *ch;
+	char *chh;
 
-	ch = va_arg(ls, char *);
-	if (va_arg(ls, char *) == NULL)
-		ch = "(nil)";
-	printf("%s", ch);
+	chh = va_arg(ls, char *);
+	if (chh == NULL)
+		chh = "(nil)";
+	printf("%s", chh);
 }
 /**
  * print_all - hi
