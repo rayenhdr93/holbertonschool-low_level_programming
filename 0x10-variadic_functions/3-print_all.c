@@ -1,11 +1,35 @@
 #include "variadic_functions.h"
 /**
  * printint - hi
- * @a: hi
+ * @ls: hi
  */
-void printint(int a)
+void printint(va_list ls)
 {
-	printf("%d",a)
+	printf("%d", va_arg(ls, int));
+}
+/**
+ * printchar - hi
+ * @ls: hi
+ */
+void printchar(va_list ls)
+{
+	printf("%c", va_arg(ls, int));
+}
+/**
+ * printfloat - hi
+ * @ls: hi
+ */
+void printfloat(va_list ls)
+{
+	printf("%f", va_arg(ls, double));
+}
+/**
+ * printstring - hi
+ * @ls: hi
+ */
+void printstring(va_list ls)
+{
+	printf("%s", va_arg(ls, char *));
 }
 /**
  * print_all - hi
@@ -13,25 +37,32 @@ void printint(int a)
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int x, i, j;
-	x = strlen(format);
-	i = 0;
-	char f[4] = {'c','i','f','s'};
+	int x, i, j;
+	op_t ops[] = {
+	{'c', printchar},
+	{'i', printint},
+	{'f', printfloat},
+	{'s', printstring},
+	};
 	va_list ls;
 
-	va_start(ls, ...);
-	while (i < n)
+	i = 0;
+	x = strlen(format);
+	va_start(ls, format);
+	while (i < x)
 	{
 		j = 0;
-		while ((j < 4) && (format[i] != f[j]))
+		while ((j < 4) && (format[i] != ops[j].op))
 		{
-		j += 1;
+		j++;
 		}
-		if (format[i] == f[j])
+		if (format[i] == ops[j].op)
 		{
+			if (i > 0)
+			printf(", ");
+			ops[j].f(ls);
 		}
 		i++;
 	}
-	printf("%d", x)
 	printf("\n");
 }
