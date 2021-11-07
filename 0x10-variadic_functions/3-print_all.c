@@ -29,7 +29,10 @@ void printfloat(va_list ls)
  */
 void printstring(va_list ls)
 {
-	printf("%s", va_arg(ls, char *));
+	if (va_arg(ls, char *) != NULL)
+		printf("%s", va_arg(ls, char *));
+	else
+		printf("(nil)");
 }
 /**
  * print_all - hi
@@ -45,7 +48,9 @@ void print_all(const char * const format, ...)
 	{'s', printstring},
 	};
 	va_list ls;
+	char *ch;
 
+	ch = "";
 	i = 0;
 	x = strlen(format);
 	va_start(ls, format);
@@ -58,11 +63,11 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i] == ops[j].op)
 		{
-			if (i > 0)
-			printf(", ");
+			printf("%s", ch);
 			ops[j].f(ls);
 		}
 		i++;
+		ch = ", ";
 	}
 	printf("\n");
 }
