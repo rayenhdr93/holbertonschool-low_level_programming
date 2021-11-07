@@ -52,6 +52,8 @@ void print_all(const char * const format, ...)
 	va_list ls;
 	char *ch;
 
+	if (format != NULL)
+		printf("\n");
 	ch = "";
 	i = 0;
 	x = strlen(format);
