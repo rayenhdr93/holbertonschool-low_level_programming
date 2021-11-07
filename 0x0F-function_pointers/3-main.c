@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
 			&& (op[0] != '/') && (op[0] != '%'))
 	{
 		printf("Error\n");
-		return (NULL);
 		exit(99);
 	}
 	if ((op[0] == '%' || op[0] == '/') && y == 0)
