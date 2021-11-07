@@ -6,7 +6,7 @@
  * @s: hi
  * Return: hi
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int x, int y)
 {
 	op_t ops[] = {
 	{"+", op_add},
@@ -18,15 +18,13 @@ int (*get_op_func(char *s))(int a, int b)
 	};
 	int i = 0;
 
-	while (i < 5)
+	while (ops[i].op != NULL)
 	{
-		if (ops[i].op == s)
+		if (ops[i].op[0] == s[0])
 		{
-			return (ops[i].(*f)(a, b));
+			return (ops[i].f);
 		}
 		i++;
 	}
-	printf("Error\n");
 	return (NULL);
-	exit(99);
 }
