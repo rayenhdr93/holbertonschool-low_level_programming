@@ -66,9 +66,9 @@ void print_all(const char * const format, ...)
 		{
 			printf("%s", ch);
 			ops[j].f(ls);
+			ch = ", ";
 		}
 		i++;
-		ch = ", ";
 	}
 	printf("\n");
 }
