@@ -29,10 +29,11 @@ void printfloat(va_list ls)
  */
 void printstring(va_list ls)
 {
+	char *ch;
+	ch = va_arg(ls, char *);
 	if (va_arg(ls, char *) != NULL)
-		printf("%s", va_arg(ls, char *));
-	else
-		printf("(nil)");
+		ch = "(nil)";
+	printf("%s", ch);
 }
 /**
  * print_all - hi
