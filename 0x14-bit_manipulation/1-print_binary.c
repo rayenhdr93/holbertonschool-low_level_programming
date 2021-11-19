@@ -1,4 +1,5 @@
 #include "main.h"
+#include "limits.h"
 /**
  * power2 - hi
  * @n: hi
@@ -22,7 +23,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int i, x;
 
-	if (n == 4294967295)
+	if (n == ULONG_MAX)
 	{
 		i = 0;
 		while (i < 34)
