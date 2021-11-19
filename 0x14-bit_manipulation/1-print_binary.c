@@ -26,7 +26,7 @@ void print_binary(unsigned long int n)
 	if (n == ULONG_MAX)
 	{
 		i = 0;
-		while (i < 34)
+		while (i < 64)
 		{
 			_putchar('1');
 			i++;
