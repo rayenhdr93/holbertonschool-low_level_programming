@@ -22,6 +22,16 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int i, x;
 
+	if (n == ULONG_MAX)
+	{
+		i = 0;
+		while (i < 34)
+		{
+			_putchar('1');
+			i++;
+		}
+		return;
+	}
 	if (n == 0)
 	{
 		_putchar('0');
