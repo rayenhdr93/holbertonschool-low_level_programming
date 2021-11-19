@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int i, x;
 
-	if (n == ULONG_MAX)
+	if (n == 4294967295)
 	{
 		i = 0;
 		while (i < 34)
