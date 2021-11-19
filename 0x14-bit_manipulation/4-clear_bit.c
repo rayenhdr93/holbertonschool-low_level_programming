@@ -7,13 +7,11 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int i = 0;
+	unsigned int i = 1;
 
 	if (index > 34)
 		return (-1);
 	i = i << (index - 1);
-	printf("n = %ld\n", *n);
-	printf("i = %d\n", i);
 	if (i <= *n)
 	{
 	*n = *n - i;
