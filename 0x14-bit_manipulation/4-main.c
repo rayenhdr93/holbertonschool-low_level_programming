@@ -16,5 +16,8 @@ int main(void)
     nb = 2048;
     n = clear_bit(&nb, 20);
 	printf("nb:%lu\nret:%d\n", nb, n);
+    nb = 2048;
+    n = clear_bit(&nb, 11);
+	printf("nb:%lu\nret:%d\n", nb, n);
 	return (0);
 }
