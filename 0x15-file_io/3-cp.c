@@ -84,8 +84,8 @@ char *readfromfile(char *filename)
 	y = close(x);
 	if (y == -1)
 	{
-		exit(100);
 		printf("Error: Can't close fd %d", x);
+		exit(100);
 	}
 	return (c);
 }
@@ -120,8 +120,8 @@ void writetofile(char *filename, char *ch)
 	y = close(x);
 	if (y == -1)
 	{
-		exit(100);
 		printf("Error: Can't close fd %d", x);
+		exit(100);
 	}
 }
 /**
