@@ -1,0 +1,83 @@
+#include "main.h"
+/**
+ * readfromfile - hi
+ * @filename: hi
+ * Return: hi
+ */
+char *readfromfile(char *filename)
+{
+	char *c = malloc(1024);
+	int x = 0, y = 1024, i = 1024;
+
+	if (filename == NULL)
+		return (0);
+	x =	open(filename, O_RDONLY);
+	if (x == -1)
+	{
+		exit(98);
+		printf("Error: Can't read from");
+	}
+	while (y == 1024)
+	{
+		y = read(x, c, 1024);
+		if (y == -1)
+		{
+			exit(98);
+			printf("Error: Can't read from");
+		}
+		c = realloc(c, i);
+		i *= 2;
+	}
+	close(x);
+	return (c);
+}
+/**
+ * writetofile - hi
+ * @filename: hi
+ * @ch: hi
+ * Return: hi
+ */
+void writetofile(char *filename, char *ch)
+{
+	int x = 0, y;
+
+	if (!filename)
+	{
+		exit(99);
+		printf("Error: Can't write to");
+	}
+	x = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (x == -1)
+	{
+		exit(99);
+		printf("Error: Can't write to");
+	}
+	if (ch)
+		y = write(x, ch, strlen(ch));
+	if (y == -1)
+	{
+		exit(99);
+		printf("Error: Can't write to");
+	}
+	close(x);
+}
+/**
+ * main - hi
+ * @ac: hi
+ * @av: hi
+ * Return: hi
+ */
+int main(int ac, char **av)
+{
+	char *ch;
+
+	if (ac != 3)
+	{
+		exit(97);
+		printf("Usage: cp file_from file_to");
+	}
+	ch = readfromfile(av[1]);
+	writetofile(av[2], ch);
+	free(ch);
+	return (0);
+}
