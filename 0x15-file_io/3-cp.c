@@ -81,7 +81,12 @@ char *readfromfile(char *filename)
 		i *= 2;
 		c = _realloc(c, i - 1024, i);
 	}
-	close(x);
+	y = close(x);
+	if (y == -1)
+	{
+		exit(100);
+		printf("Error: Can't close fd FD_VALUE");
+	}
 	return (c);
 }
 /**
@@ -112,7 +117,12 @@ void writetofile(char *filename, char *ch)
 		exit(99);
 		printf("Error: Can't write to");
 	}
-	close(x);
+	y = close(x);
+	if (y == -1)
+	{
+		exit(100);
+		printf("Error: Can't close fd FD_VALUE");
+	}
 }
 /**
  * main - hi
