@@ -85,7 +85,7 @@ char *readfromfile(char *filename)
 	if (y == -1)
 	{
 		exit(100);
-		printf("Error: Can't close fd FD_VALUE");
+		printf("Error: Can't close fd %d", x);
 	}
 	return (c);
 }
@@ -121,7 +121,7 @@ void writetofile(char *filename, char *ch)
 	if (y == -1)
 	{
 		exit(100);
-		printf("Error: Can't close fd FD_VALUE");
+		printf("Error: Can't close fd %d", x);
 	}
 }
 /**
