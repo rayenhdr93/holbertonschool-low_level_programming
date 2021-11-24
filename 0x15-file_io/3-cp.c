@@ -74,8 +74,9 @@ int main(int ac, char **av)
 	while (l == 1024)
 	{
 	ch = readfromfile(x);
-	writetofile(a, ch);
 	l = strlen(ch);
+	if (l > 0)
+	writetofile(a, ch);
 	}
 	y = close(x);
 	if (y == -1)
