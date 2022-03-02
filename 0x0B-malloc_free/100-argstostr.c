@@ -25,7 +25,6 @@ if (str == NULL)
 {
 return (NULL);
 }
-printf("size : %ld\n", sizeof(str));
 for (i = 0; i < a; i++)
 {
 	strcat(str, av[i]);
