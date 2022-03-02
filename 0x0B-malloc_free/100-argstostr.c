@@ -1,23 +1,34 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * argstostr - hi
- * @ac: hi
- * @av: hi
+ * argstostr - Entry point
+ *@ac:int
+ *@av:string
+ * Return: Always 0 (Success)
  */
 char *argstostr(int ac, char **av)
 {
-	char ch[10000];
-	char *p = ch;
-	int i, x, j, y;
-	
-	y = -1;
-	for (i = 1; i < ac; i++)
-	{
-		y++;
-		x = strlen(av[i]);
-		for (j = 0; j < x; j++)
-			ch[y] = av[i][j];
-	}
-	return (p);
+unsigned int l, i, a;
+char *str;
+if (ac == 0 || av == NULL)
+	return (NULL);
+l = 0;
+a = ac;
+for (i = 0; i < a; i++)
+{
+	l = strlen(av[i]) + l;
+}
+str = malloc(sizeof(char *) * l);
+if (str == NULL)
+{
+return (NULL);
+}
+for (i = 0; i < a; i++)
+{
+	strcat(str, av[i]);
+	strcat(str, "\n");
+}
+return (str);
 }
