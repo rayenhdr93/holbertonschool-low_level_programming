@@ -6,10 +6,11 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ht = malloc(sizeof(ht));
-	
+	hash_table_t *ht = malloc(sizeof(hash_table_t));
+
 	if (!ht)
 		return (NULL);
 	ht->size = size;
-	return ht;
+	ht->array = malloc(size);
+	return (ht);
 }
